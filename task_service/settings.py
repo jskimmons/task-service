@@ -1,19 +1,14 @@
 import os
 from pathlib import Path
 
-# 🏠 Base directory
 BASE_DIR = Path(__file__).resolve().parent.parent
 
-# ⚙️ Secret key (for local dev only)
 SECRET_KEY = "django-insecure-local-testing-only"
 
-# 🔓 Turn off debug in production
 DEBUG = True
 
-# 🌐 Allowed hosts (localhost only)
 ALLOWED_HOSTS = []
 
-# ✅ Installed apps
 INSTALLED_APPS = [
     "django.contrib.admin",
     "django.contrib.auth",
@@ -21,9 +16,7 @@ INSTALLED_APPS = [
     "django.contrib.sessions",
     "django.contrib.messages",
     "django.contrib.staticfiles",
-    # Third-party
     "rest_framework",
-    # Your apps
     "tasks",
     "users",
 ]
@@ -69,7 +62,6 @@ DATABASES = {
     }
 }
 
-# Password validation (optional for local dev)
 AUTH_PASSWORD_VALIDATORS = []
 
 # Internationalization
