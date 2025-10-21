@@ -184,6 +184,5 @@ class TaskSummaryViewTests(APITestCase):
         Test the summary endpoint returns the correct shape and counts
         """
         response = self.client.get(self.summary_url)
-        print(self.summary_url)
         self.assertEqual(response.status_code, status.HTTP_200_OK)
         self.assertDictEqual({"pending": 1, "in_progress": 1, "done": 1}, response.data)
